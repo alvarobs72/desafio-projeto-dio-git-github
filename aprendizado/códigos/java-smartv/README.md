@@ -1,0 +1,1 @@
+# Neste código estou simulando os comportamentos de uma Televisão
