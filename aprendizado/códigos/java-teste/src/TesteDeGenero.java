@@ -1,7 +1,7 @@
 public class TesteDeGenero {
 
 public static void main (String [] args) {
-   // Altere somente o valor da variável "sexo" para testar o código
+   // Altere somente o valor da variável "genero" para testar o código
     char genero = ' ';
 
     if (genero == 'M') {
