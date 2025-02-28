@@ -23,7 +23,17 @@ public class Television {
         public void diminuirCanal() {
         canal--;
     }
-        public void trocarCanal(int novoCanal) {
+        public void definirCanal(int novoCanal) {
         canal = novoCanal;
+    }
+        public void definirVolume(int novoVolume) {
+        volume = novoVolume;
+    }
+        public void status() {
+        System.out.println("Televisão ligada? " + ligada);
+        System.out.println("Volume: " + volume);
+        System.out.println("Canal: " + canal);
+        System.out.println("Canal Antecessor: " + canalAntecessor);
+        System.out.println("Canal Sucessor: " + canalSucessor);
     }
 }
