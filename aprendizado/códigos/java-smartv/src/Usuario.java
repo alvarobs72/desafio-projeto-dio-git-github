@@ -5,7 +5,6 @@ public class Usuario {
                 tv.ligar();
                 tv.aumentarVolume();
                 tv.aumentarVolume();
-                tv.
 
             }
 }
