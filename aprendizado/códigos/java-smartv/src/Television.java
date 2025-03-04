@@ -1,10 +1,12 @@
-public class Television {
-    boolean ligada = false;
-    int volume = 15;
-    int canal = 0;
-    int canalAntecessor = canal - 1;
-    int canalSucessor = canal + 1;
+import java.util.Scanner;
 
+public class Television {
+boolean ligada = false;
+int volume = 15;
+int canal = 0;
+final String marca = "Samsung";
+String aplicativo = "N/A";
+        
         public void ligar() {
         ligada = true;
     }
@@ -12,28 +14,70 @@ public class Television {
         ligada = false;
     }
         public void aumentarVolume() {
-        volume++;
+        if (ligada == true) {
+        volume++  ;
+        }else {
+        System.out.println("");
+        }
     }
         public void diminuirVolume() {
-        volume--;
+        if (ligada == true) {
+            volume--;
+    }else {
+            System.out.println("");
+        }
     }
         public void aumentarCanal() {
-        canal++;
+        if (ligada == true) {
+            canal++;
+    }else {
+            System.out.println("");
+        }
     }
         public void diminuirCanal() {
-        canal--;
+        if (ligada == true) {
+            canal--;
+        }else {
+        System.out.println("");
+        }
     }
         public void definirCanal(int novoCanal) {
-        canal = novoCanal;
+        if (ligada == true) {
+            canal = novoCanal;
+    }else {
+            System.out.println("");
+        }
     }
         public void definirVolume(int novoVolume) {
-        volume = novoVolume;
+        if (ligada == true) {
+            volume = novoVolume;
+    }else {
+            System.out.println("");
+        }
     }
+        public void abrirAplicativo(String novoAplicativo) {
+        if (ligada == true) {
+            aplicativo = novoAplicativo;
+            
+        }else {
+            System.out.println("");
+        }
+    }
+        public void fecharAplicativo() {
+        aplicativo = "N/A";
+        }
         public void status() {
-        System.out.println("Televisão ligada? " + ligada);
-        System.out.println("Volume: " + volume);
-        System.out.println("Canal: " + canal);
-        System.out.println("Canal Antecessor: " + canalAntecessor);
-        System.out.println("Canal Sucessor: " + canalSucessor);
+        if (ligada == true) {
+            System.out.println("Status: " + ligada);
+            System.out.println("Marca: " + marca);
+            System.out.println("Aplicativo aberto: " + aplicativo);
+            System.out.println("Volume: " + volume);
+        } if (aplicativo != "N/A") {
+            System.out.println("canal: " + canal);
+
+        } if (ligada == false) {
+            System.out.println("A tv está desligada.");
+            System.out.println("Marca: " + marca);
+        }
     }
 }
