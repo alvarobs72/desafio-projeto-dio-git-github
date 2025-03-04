@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 public class Television {
-boolean ligada = false;
-int volume = 15;
-int canal = 0;
-final String marca = "Samsung";
-String aplicativo = "N/A";
+        Scanner sc = new Scanner(System.in);
+        boolean ligada = false;
+        int volume = 15;
+        int canal = 0;
+  final String marca = "Samsung";
+        String aplicativo = "N/A";
         
         public void ligar() {
         ligada = true;
@@ -41,23 +42,26 @@ String aplicativo = "N/A";
         System.out.println("");
         }
     }
-        public void definirCanal(int novoCanal) {
+        public void definirCanal() {
         if (ligada == true) {
-            canal = novoCanal;
+            System.out.println("Digite o canal desejado: ");
+            canal = sc.nextInt();
     }else {
             System.out.println("");
         }
     }
-        public void definirVolume(int novoVolume) {
+        public void definirVolume() {
         if (ligada == true) {
-            volume = novoVolume;
+            System.out.println("Digite o volume desejado: ");
+            volume = sc.nextInt();
     }else {
             System.out.println("");
         }
     }
-        public void abrirAplicativo(String novoAplicativo) {
+        public void abrirAplicativo() {
         if (ligada == true) {
-            aplicativo = novoAplicativo;
+            System.out.println("Digite o aplicativo desejado: ");
+            aplicativo = sc.next();
             
         }else {
             System.out.println("");
@@ -68,14 +72,15 @@ String aplicativo = "N/A";
         }
         public void status() {
         if (ligada == true) {
-            System.out.println("Status: " + ligada);
+            
+            System.out.println("--------------\n\nStatus: " + ligada);
             System.out.println("Marca: " + marca);
             System.out.println("Aplicativo aberto: " + aplicativo);
             System.out.println("Volume: " + volume);
-        } if (aplicativo != "N/A") {
-            System.out.println("canal: " + canal);
+            System.out.println("Canal: " + canal + "\n\n" + "--------------");
+        } 
 
-        } if (ligada == false) {
+         if (ligada == false) {
             System.out.println("A tv está desligada.");
             System.out.println("Marca: " + marca);
         }
