@@ -61,7 +61,6 @@ public class Usuario {
                     System.out.println("Opção inválida");
                     break;
             }
-            sc.close();
         }
 }
 }
