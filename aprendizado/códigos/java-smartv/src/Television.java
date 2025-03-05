@@ -85,4 +85,7 @@ public class Television {
             System.out.println("Marca: " + marca);
         }
     }
+        public boolean getLigado() {
+        return ligada;
+        }
 }
