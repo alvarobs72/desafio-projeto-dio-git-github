@@ -5,7 +5,7 @@ public class Usuario {
         Scanner sc = new Scanner(System.in);
         Television tv = new Television();
         tv.ligar();
-        while (tv.getLigado()== true) {
+        while (tv.getLigado()) {
             System.out.println("1 - Aumentar volume");
             System.out.println("2 - Diminuir volume");
             System.out.println("3 - Aumentar canal");
@@ -49,6 +49,7 @@ public class Usuario {
                     break;
                 case 8:
                     tv.fecharAplicativo();
+                    tv.status();
                     break;
                 case 9:
                     tv.status();;

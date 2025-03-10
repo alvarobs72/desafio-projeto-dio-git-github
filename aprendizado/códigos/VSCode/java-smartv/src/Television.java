@@ -10,36 +10,38 @@ public class Television {
         
         public void ligar() {
         ligada = true;
+        System.out.println("Ligado");
     }
         public void desligar() {
         ligada = false;
+        System.out.println ("---------------------\n\nA tv foi desligada.");
     }
         public void aumentarVolume() {
         if (ligada == true) {
         volume++  ;
         }else {
-        System.out.println("");
+        System.out.println();
         }
     }
         public void diminuirVolume() {
         if (ligada == true) {
             volume--;
     }else {
-            System.out.println("");
+            System.out.println();
         }
     }
         public void aumentarCanal() {
         if (ligada == true) {
             canal++;
     }else {
-            System.out.println("");
+            System.out.println();
         }
     }
         public void diminuirCanal() {
         if (ligada == true) {
             canal--;
         }else {
-        System.out.println("");
+        System.out.println();
         }
     }
         public void definirCanal() {
@@ -47,7 +49,7 @@ public class Television {
             System.out.println("Digite o canal desejado: ");
             canal = sc.nextInt();
     }else {
-            System.out.println("");
+            System.out.println();
         }
     }
         public void definirVolume() {
@@ -55,7 +57,7 @@ public class Television {
             System.out.println("Digite o volume desejado: ");
             volume = sc.nextInt();
     }else {
-            System.out.println("");
+            System.out.println();
         }
     }
         public void abrirAplicativo() {
@@ -64,7 +66,7 @@ public class Television {
             aplicativo = sc.next();
             
         }else {
-            System.out.println("");
+            System.out.println();
         }
     }
         public void fecharAplicativo() {
